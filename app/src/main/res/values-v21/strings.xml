@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="account_name_imp">Account Name</string>
+    <string name="Initial_balance">Initial Account Balance</string>
+    <string name="AddAccount_button_name">Add Account</string>
+    <string name="cancel_button_imp">Cancel</string>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="in.screenbiz.www.imageledger">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_new2"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_app_id" />
+
+
+        <meta-data android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_app_id" />
+        <meta-data android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+
+        <meta-data android:name="com.facebook.accountkit.FacebookAppEventsEnabled"
+            android:value="true"/>
+
+        <activity
+            android:name="com.facebook.accountkit.ui.AccountKitActivity"
+            android:theme="@style/Theme.AccountKit"
+            android:noHistory="true"
+            tools:replace="android:theme"/>
+        <activity
+            android:name=".CloudLogin"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:noHistory="false"
+            android:theme="@style/AppTheme"
+            tools:replace="android:theme" />
+        <activity
+            android:name=".Image_ledger_sign_up"
+            android:label="Register"
+            android:parentActivityName=".Image_ledger_sign_in"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Image_ledger_sign_in"
+            android:label="Image Ledger Log In"
+            android:noHistory="true"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Accounts"
+            android:label="@string/title_activity_accounts"
+            android:noHistory="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop">
+
+
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable_accounts"/>
+
+
+
+        </activity>
+
+
+
+        <activity
+            android:name=".NewAccounts"
+            android:label="Add Account"
+            android:parentActivityName=".Accounts" />
+        <activity
+            android:name=".AccountStatus"
+            android:label="@string/title_activity_account_status"
+            android:parentActivityName=".Accounts"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.screenbiz.www.imageledger.Accounts" />
+        </activity>
+        <activity
+            android:name=".NewTransaction"
+            android:label="New Transaction"
+            android:parentActivityName=".AccountStatus" />
+        <activity
+            android:name=".TransactionStatus"
+            android:label="Transaction Status"
+            android:parentActivityName=".AccountStatus" />
+        <activity
+            android:name=".Transaction_Images_Tabbed"
+            android:label="@string/title_activity_transaction__images__tabbed"
+            android:parentActivityName=".TransactionStatus"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.screenbiz.www.imageledger.TransactionStatus" />
+        </activity>
+    </application>
+
+</manifest>

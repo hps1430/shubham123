@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_new_accounts"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="in.screenbiz.www.imageledger.NewAccounts">
+
+
+        <ScrollView
+            android:id="@+id/Add_new_account_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/new_account_form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp">
+
+                    <EditText
+                        android:id="@+id/account_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/account_name_imp"
+                        android:inputType="textPersonName|textCapWords"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/activity_vertical_margin"
+                    android:weightSum="1">
+
+
+
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginLeft="1sp"
+                        android:layout_marginRight="3sp"
+                        android:textSize="30sp"
+                        android:gravity="center_horizontal"
+                        android:textAlignment="center"
+                        android:layout_weight="0.1"
+                        />
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+
+                        <EditText
+                            android:id="@+id/initial_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/Initial_balance"
+                            android:inputType="numberDecimal|numberSigned"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:layout_weight="0.9"/>
+
+
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp">
+
+                    <EditText
+                        android:id="@+id/account_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/account_description"
+                        android:inputType="textLongMessage|textCapSentences"
+                        android:maxLength="16"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:layout_alignParentEnd="true"
+
+        android:weightSum="1"
+        android:baselineAligned="false"
+        >
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonStyleSmall"
+            android:text="@string/AddAccount_button_name"
+            android:layout_weight="0.41"
+            android:id="@+id/button_add_imp" />
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonStyleSmall"
+            android:text="@string/cancel_button_imp"
+            android:layout_weight="0.70"
+            android:id="@+id/button_cancel_imp" />
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
